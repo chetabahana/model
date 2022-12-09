@@ -1,0 +1,14 @@
+		{%- include tabs.liquid size=2 -%}<div class="page">
+			{%- include templates/nodes/header.html -%}
+			{%- include templates/breadcrumbs.html -%}
+			{%- assign base_title = base | replace: "/", "" -%}
+			{%- if base == "" -%}
+				{%- include templates/leads.html -%}
+			{%- elsif titles contains base_title -%}
+				{%- include templates/leads{{ base }}.html -%}
+			{%- elsif page.path contains "README.md" -%}
+				{%- include templates/leads/maps.html -%}
+			{%- else -%}			
+				{%- include templates/leads/feed.html -%}
+			{%- endif -%}
+		</div>

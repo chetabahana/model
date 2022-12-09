@@ -1,0 +1,34 @@
+	{%- comment %} favicon icon {% endcomment %}
+		<link rel="manifest" href="/manifest.json">
+		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+		<link rel="canonical" href="{{ schema_surl }}">
+	{%- comment %} canonical link {% endcomment -%}
+	{%- if prev %}
+		<link rel="prev" href="{{ prev.url | absolute_url }}">
+	{%- endif -%}
+
+	{%- if next %}
+		<link rel="next" href="{{ next.url | absolute_url }}">
+	{%- endif -%}
+
+		<link type="application/feed+json" rel="alternate" href="/grammar/feed.json" title="Site Feed" />
+		{% feed_meta %}
+
+	{%- comment %} alternate {% endcomment %}
+		<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96">
+
+	{%- comment %} safari {% endcomment %}
+		<link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
+		<link rel="mask-icon" type="image/svg+xml" href="/images/favicon.svg" color="{{ theme_color }}">
+
+	{%- comment %} apple-touch-icon {% endcomment %}
+		<link rel="apple-touch-icon" href="/images/apple-touch-icon-300x300.jpg">
+
+	{%- comment %} dns-prefetch {% endcomment %}
+  		<link rel="stylesheet" type="text/css" href="/diagram{% if site.debug.dist != false %}.min{% endif %}.css">
+  		<link rel="stylesheet" type="text/css" href="/css/theme{% if site.debug.dist != false %}.min{% endif %}.css">
+		{% if extra_scss.size > 0 %}
+		<style>{{ extra_scss | scssify | strip_newlines }}</style>
+		{% endif %}

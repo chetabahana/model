@@ -1,0 +1,32 @@
+---
+permalink: /404.html
+---
+{%- comment -%}
+*
+*  Any 404.html at the root of your _site directory will be served automatically 
+*  by GitHub Pages and the local WEBrick development server.
+*  https://jekyllrb.com/tutorials/custom-404-page/
+*
+*  You may see running code on the link below:
+*  https://chetabahana.github.io/404-page/
+*
+{%- include leads/rest/i18n.liquid -%}
+
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <meta name="viewport" content="width=device-width, minimum-scale=0.1">
+        <title>Page not found!</title>
+        <style type="text/css">
+            body {margin: 0;}
+            .container {display: flex; height: 100vh; cursor: pointer; justify-content: center; align-items: center;}        
+            .centerImage {cursor: pointer;}
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <img src="/images/404.png" alt="Page not found!" class="centerImage" onclick="location.href='/'"></a>
+        </div>
+    </body>
+</html>

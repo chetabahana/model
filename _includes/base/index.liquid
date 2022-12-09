@@ -1,0 +1,12 @@
+{%- comment -%}
+*
+*  index the feeds output
+*
+{%- endcomment -%}
+{%- assign my_feeds = '' | split: ',' -%}
+{%- for feed in feeds -%}
+	{%- assign my_dir = feed.path | split: '/' | pop | join: '/' -%}
+	{%- if my_dir == my_base -%}
+		{%- assign my_feeds = my_feeds | push: feed -%}
+	{%- endif -%}
+{%- endfor -%}

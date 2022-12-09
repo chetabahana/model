@@ -1,0 +1,16 @@
+{%- comment -%}
+*
+*  This loop loops through all collection called `feeds` with category 'section'
+*  and sorts it by the front matter variable 'weight' and than render
+*  each of the {{ output }} with their own layout
+*
+*  You may see the running code here:
+*  https://eq19.github.io/grammar/feed.json
+*
+{%- endcomment -%}
+{%- include base/assign.liquid -%}
+{%- include base/capture.liquid -%}
+{%- include base/digger.liquid -%}
+{%- include base/index.liquid -%}
+{%- include base/output.liquid -%}
+{%- include base/render.liquid -%}

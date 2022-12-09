@@ -1,0 +1,7 @@
+{%- assign my_num = my_push.path 
+	| split: '/' 
+	| size 
+	| minus: my_path_size -%}
+{%- if my_num == 1 and my_push.path contains my_title -%}
+	{%- assign my_index = my_index | push: forloop.index0 -%}
+{%- endif -%}

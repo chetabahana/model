@@ -1,0 +1,29 @@
+			<section id="l-main">
+				<div class="container">
+					<div class="row">
+						<div class="sidebar-wrap col-xs-12 col-sm-4 col-sm-pull-9">
+							<div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
+								{%- assign size = site.posts | size -%}
+								{%- if size != 0 -%}
+									{%- include posts/sidebar.html %}
+								{%- else -%}
+									{%- include templates/sidebar.html %}
+								{%- endif -%}
+							</div>
+						</div>
+						<div class="content-wrap col-xs-12 col-sm-8 col-sm-push-3">
+							<div id="content">
+								<hr>
+								{% if page.needs_anwser %}
+									{% include needs_answer.html %}
+								{% endif %}
+								<div role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
+									<div class="markdown-body" itemprop="articleBody">
+										{{ content }}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>

@@ -1,0 +1,19 @@
+{%- comment -%}
+*
+*  collect category
+*
+{%- endcomment -%}
+{%- assign my_items = "" | split: "," -%}
+{%- for item in feed -%}
+	{%- assign my_items = my_items | push:item -%}
+{%- endfor -%}
+{%- assign sorted_items = my_items | sort_natural -%}
+{%- include tabs.liquid size=my_size -%}{{ my_tab }}"count": {{ my_count[my_pos] | jsonify }},
+{%- include tabs.liquid size=my_size -%}{{ my_tab }}"weight": {{ feed.weight | jsonify }},
+{%- include tabs.liquid size=my_size -%}{{ my_tab }}"title": {{ feed.title | jsonify }},
+{%- include tabs.liquid size=my_size -%}{{ my_tab }}"category": {{ feed.category | jsonify }},
+{%- for item in sorted_items -%}
+	{%- unless my_atributes contains item -%}
+		{%- include tabs.liquid size=my_size -%}{{ my_tab }}{{ item | jsonify }}: {{ feed[item] | jsonify }},
+	{%- endunless -%}
+{%- endfor -%}

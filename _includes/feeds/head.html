@@ -1,0 +1,29 @@
+		{%- include tabs.liquid size=2 -%}<title>{{ site.slogan }}</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta name="keywords" content="{{ site.keywords }}" />
+		<meta name="description" content="{{ site.description }}" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="theme-color" content="#ffffff">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/icon/ms-icon-144x144.png">
+
+		 <!-- Default and Custom CSS -->
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="manifest" href="/icon/manifest.json">
+
+		<link rel="stylesheet" type="text/css" media="screen" href="/diagram.css"/>
+		<link rel="stylesheet" type="text/css" media="screen" href="/styles/theme.css">
+
+		{% feed_meta %}
+		<link type="application/feed+json" rel="alternate" href="{{ site.url }}/feed.json" title="Site Feed" />
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-KKD75D8');</script>
+		<!-- End Google Tag Manager -->
+
+	</head>
+	<body>

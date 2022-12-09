@@ -1,0 +1,25 @@
+{%- comment -%}
+*
+*  This loop loops through all collection called `feeds` with category 'section'
+*  and sorts it by the front matter variable 'weight' and than collect
+*  each of the location into the indexed sitemap
+*
+*  You may see the running code here:
+*  https://eq19.github.io/sitemap.xml
+*
+{%- endcomment -%}
+
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+    xmlns:xhtml="http://www.w3.org/1999/xhtml"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{%- if page.url contains '/index_1' -%}
+		{%- include sitemap/default.xml -%}
+	{%- elsif page.url contains '/index_' -%}
+		{%- include sitemap/urlset.xml -%}
+	{%- else -%}
+		{%- include sitemap/default.xml -%}
+	{%- endif -%}
+</urlset>

@@ -1,0 +1,24 @@
+{%- comment -%}
+*
+*  collect attributes
+*
+{%- endcomment -%}
+{%- assign myId = feed.myId -%}
+{%- include tabs.liquid size=my_size -%}{
+{%- include tabs.liquid size=my_size -%}{{ my_tab }}"id": {{ myId | jsonify }},
+{%- if myId > 114 -%}
+	{%- assign my_key = myId | minus: 101 -%}
+{%- else -%}
+	{%- assign my_key = myId | minus: 1 -%}
+{%- endif -%}
+{%- include base/digger/items/attributes/roots.liquid -%}
+{%- include tabs.liquid size=my_size -%}{{ my_tab }}"key": {{ layout.module[my_key] | jsonify }},
+{%- if my_pos -%}
+	{%- include tabs.liquid size=my_size -%}{{ my_tab }}"pos": {{ my_pos | jsonify }},
+{%- endif -%}
+{%- if feed.link -%}
+	{%- include tabs.liquid size=my_size -%}{{ my_tab }}"link": {{ feed.link | jsonify }},
+{%- endif -%}
+{%- if my_root -%}
+	{%- include tabs.liquid size=my_size -%}{{ my_tab }}"root": {{ my_root }},
+{%- endif -%}

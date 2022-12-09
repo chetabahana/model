@@ -1,0 +1,8 @@
+{%- for page in site_pages -%}
+	{%- include tabs.liquid size=1 -%}<url>
+	{%- assign page_url = page.url | absolute_url | replace: "/sitemap/","/" -%}
+	{%- include tabs.liquid size=2 -%}<loc>{{ page_url | xml_escape }}</loc>
+	{%- include tabs.liquid size=2 -%}<priority>{{ page.content | size | divided_by: 2048.0 | times: 10 | ceil | divided_by: 10.0 | at_least: 0.1 | at_most: 1.0 }}</priority>
+	{%- include tabs.liquid size=2 -%}<lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+	{%- include tabs.liquid size=1 -%}</url>
+{%- endfor %}

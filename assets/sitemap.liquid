@@ -1,0 +1,33 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{%- comment -%}
+*
+*  This loop loops through all collection called `feeds` with category 'section'
+*  and sorts it by the front matter variable 'weight' and than collect
+*  each of the location into the indexed sitemap
+*
+*  You may see the running code here:
+*  https://eq19.github.io/sitemap.xml
+*
+{%- endcomment -%}
+
+{%- include extra/rest/defaults.liquid -%}
+{%- include leads/rest/defaults.liquid -%}
+
+{%- if site.baseurl == "" -%}
+	<?xml version="1.0" encoding="UTF-8"?>
+	<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+	<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	{%- for i in (1..1000) -%}
+		{%- include tabs.liquid size=1 -%}<sitemap>
+		{%- assign page_url = "/sitemap/index_" | append: i | append: ".xml" -%}
+		{%- include tabs.liquid size=2 -%}<loc>{{ page_url | absolute_url | xml_escape }}</loc>
+		{%- include tabs.liquid size=2 -%}<lastmod>2017-02-16T04:00:08-05:00</lastmod>
+		{%- include tabs.liquid size=1 -%}</sitemap>
+	{%- endfor -%}
+	{%- include tabs.liquid -%}</sitemapindex>
+{%- else -%}
+	{%- include sitemap.liquid -%}
+{%- endif -%}

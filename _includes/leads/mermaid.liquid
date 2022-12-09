@@ -1,0 +1,10 @@
+{%- if content contains '<code class="language-mermaid">' -%}
+    {%- if site.mermaid.custom -%}
+        {%- include tabs.liquid size=2 -%}<script src="{{ site.mermaid.custom }}"></script>
+    {%- else -%}
+        {%- include tabs.liquid size=2 -%}<script src="{{ base }}/js/mermaid.min.js"></script>
+    {%- endif %}
+    <script>
+        mermaid.initialize({% if site.mermaid.initialize %}{{ site.mermaid.initialize | jsonify }}{% else %}{}{% endif %});
+    </script>
+{%- endif -%}

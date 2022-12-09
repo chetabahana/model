@@ -1,0 +1,32 @@
+			<section id="l-main">
+				<div class="container">
+					<div class="row">
+						<div class="sidebar-wrap col-xs-12 col-sm-4 col-sm-pull-9">
+							<div class="sidebar height-full overflow-y-scroll overflow-x-hidden">
+								{%- include templates/sidebar.html %}
+							</div>
+						</div>
+						<div class="content-wrap col-xs-12 col-sm-8 col-sm-push-3">
+							<div id="content">
+								<hr>
+								{% if page.needs_anwser %}
+									{% include needs_answer.html %}
+								{% endif %}
+								<div role="main" itemscope="itemscope" itemtype="https://schema.org/Article">
+									<div class="markdown-body" itemprop="articleBody">
+										{%- assign doc = site.baseurl | append: ".md" -%}
+										{%- assign my_page = site.html_pages 
+											| where_exp:"item", "item.path contains doc" | first -%}
+										{%- assign size = my_page | size -%}
+										{%- if size != 0 -%}
+											{{ my_page.content }}
+										{%- else -%}
+											{{ content }}
+										{%- endif -%}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>

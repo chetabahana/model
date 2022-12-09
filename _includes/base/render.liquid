@@ -1,0 +1,15 @@
+{%- comment -%}
+*
+*  render the feeds output
+*  JSON.pretty_generate(@data)
+*
+{%- endcomment -%}
+{%- if page.path != 'README.md' and page.ext != '.md' -%}
+	{%- if page.layout == 'redirect' -%}
+		{%- include leads.liquid -%}
+	{%- endif %}
+{{ my_tab }}]
+}
+{% else -%}
+	{{- content -}}
+{%- endif -%}

@@ -1,0 +1,172 @@
+	<url>
+		<loc>{{ "/page-1" | absolute_url | xml_escape }}</loc>
+		<lastmod>2016-12-28T11:34:08-02:00</lastmod>
+		<priority>1.0</priority>
+		<changefreq>yearly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-1/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-2" | absolute_url | xml_escape }}</loc>
+		<lastmod>2016-12-28T11:34:08-02:00</lastmod>
+		<priority>1.0</priority>
+		<changefreq>monthly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-2/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-2/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-3" | absolute_url | xml_escape }}</loc>
+		<lastmod>2017-01-25T16:14:28-02:00</lastmod>
+		<priority>1</priority>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-3/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-3/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-3/image-3.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption three]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-4" | absolute_url | xml_escape }}</loc>
+		<lastmod>2017-01-25T16:14:28-02:00</lastmod>
+		<priority>1</priority>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-4/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-4/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-4/image-3.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption three]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-4/image-4.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption four]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-5" | absolute_url | xml_escape }}</loc>
+		<lastmod>2016-12-28T11:34:08-02:00</lastmod>
+		<priority>1.0</priority>
+		<changefreq>monthly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-5/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-5/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-6" | absolute_url | xml_escape }}</loc>
+		<lastmod>2017-01-25T16:14:28-02:00</lastmod>
+		<priority>1</priority>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-6/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-6/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-6/image-3.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption three]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-7" | absolute_url | xml_escape }}</loc>
+		<lastmod>2017-01-25T16:14:28-02:00</lastmod>
+		<priority>1</priority>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-7/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-7/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-7/image-3.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption three]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-7/image-4.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption four]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-8" | absolute_url | xml_escape }}</loc>
+		<lastmod>2016-12-28T11:34:08-02:00</lastmod>
+		<priority>1.0</priority>
+		<changefreq>monthly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-8/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-8/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-9" | absolute_url | xml_escape }}</loc>
+		<lastmod>2017-01-25T16:14:28-02:00</lastmod>
+		<priority>1</priority>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-9/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-9/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-9/image-3.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption three]]></image:caption>
+		</image:image>
+	</url>
+	<url>
+		<loc>{{ "/page-10" | absolute_url | xml_escape }}</loc>
+		<lastmod>2017-01-25T16:14:28-02:00</lastmod>
+		<priority>1</priority>
+		<changefreq>weekly</changefreq>
+		<image:image>
+			<image:loc>{{ "/page-10/image-1.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption one]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-10/image-2.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption two]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-10/image-3.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption three]]></image:caption>
+		</image:image>
+		<image:image>
+			<image:loc>{{ "/page-10/image-4.jpg" | absolute_url | xml_escape }}</image:loc>
+			<image:caption><![CDATA[Caption four]]></image:caption>
+		</image:image>
+	</url>
